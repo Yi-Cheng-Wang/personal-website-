@@ -1,0 +1,27 @@
+<footer class="site-footer">
+	<div class="container footer-inner">
+		<div class="footer-brand">
+			<a class="brand" href="{% url 'index_en' %}" aria-label="yichengs home">{% include "shared/logo.html" %}</a>
+			<p class="footer-note">Personal website of Yi-Cheng Wang.</p>
+		</div>
+		<div class="footer-col">
+			<h2>Site</h2>
+			<ul>
+				<li><a href="{% url 'about_me_en' %}">About</a></li>
+				<li><a href="{% url 'about_links_en' %}">Links</a></li>
+				<li><a href="{% url 'history_web_en' %}">History</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h2>Contact</h2>
+			<ul>
+				<li><a href="mailto:me@yichengs.tw">me@yichengs.tw</a></li>
+			</ul>
+			{% include "shared/social.html" %}
+		</div>
+	</div>
+	<div class="container footer-bottom">
+		<p>&copy; 2023–{% now "Y" %} Yi-Cheng Wang</p>
+		<a href="https://github.com/Yi-Cheng-Wang/personal-website-" target="_blank" rel="noopener">Source code ↗</a>
+	</div>
+</footer>

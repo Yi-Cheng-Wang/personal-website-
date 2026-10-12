@@ -1,0 +1,15 @@
+{% extends "en/base.html" %}
+
+{% block title %}500｜yichengs{% endblock %}
+
+{% block content %}
+<section class="container error-page">
+	{% include "shared/mark.html" %}
+	<p class="error-code">ERROR 500</p>
+	<h1>Something went wrong</h1>
+	<p>The server ran into a problem. Please try again later.</p>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% url 'index_en' %}">Back to home <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

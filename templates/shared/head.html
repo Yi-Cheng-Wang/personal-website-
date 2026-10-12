@@ -1,0 +1,21 @@
+{% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="yichengs">
+<meta property="og:image" content="https://yichengs.tw{% static 'images/logo/og-image.png' %}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{% static 'images/logo/favicon.svg' %}" type="image/svg+xml">
+<link rel="icon" href="{% static 'images/logo/favicon-32.png' %}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{% static 'images/logo/apple-touch-icon.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+<script>
+	document.documentElement.classList.add('js');
+	try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>

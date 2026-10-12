@@ -1,0 +1,44 @@
+{% extends "en/base.html" %}
+
+{% block title %}Site history｜Yi-Cheng Wang{% endblock %}
+{% block description %}The changelog of yichengs.tw, from launch to today.{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Changelog</p>
+		<h1>Site history<span class="dot">.</span></h1>
+		<p class="page-lead">Every major update to this website, starting from a single flying ball.</p>
+	</div>
+</header>
+
+<div class="container">
+	<ol class="history" reversed>
+		<li class="reveal">
+			<time datetime="2026-10-12">2026.10.12</time>
+			<p class="h-desc">Complete redesign: a new look, a new logo, and updated personal information.</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="Importance 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-06-09">2023.06.09</time>
+			<p class="h-desc">The website's first major update!</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="Importance 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-04-20">2023.04.20</time>
+			<p class="h-desc">HTTPS enabled.</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="Importance 6/10"><span style="--v:6"></span></span>06/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-02-26">2023.02.26</time>
+			<p class="h-desc">Officially launched at http://yichengs.tw — no HTTPS yet.</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="Importance 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-02-11">2023.02.11</time>
+			<p class="h-desc">First went online, without a domain name, and it could only show Flying Ball (a game I made).</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="Importance 8/10"><span style="--v:8"></span></span>08/10</div>
+		</li>
+	</ol>
+</div>
+{% endblock %}

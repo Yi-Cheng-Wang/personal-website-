@@ -1,0 +1,20 @@
+{% extends "tw/base.html" %}
+
+{% block title %}相關連結｜王羿程 Yi-Cheng Wang{% endblock %}
+{% block description %}王羿程的 GitHub、GitLab、LinkedIn、Facebook、Instagram 與 Discord 連結。{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Links</p>
+		<h1>相關連結<span class="dot">.</span></h1>
+		<p class="page-lead">包含個人 GitLab，或是 GitHub、Facebook、Instagram 等。</p>
+	</div>
+</header>
+
+<div class="container">
+	<div class="links-grid">
+		{% include "shared/link_cards.html" with site_label="個人網站" site_en_label="個人網站（英文）" source_label="網站原始碼" gitlab_label="個人 GitLab" facebook_handle="個人頁面" discord_handle="個人檔案" email_label="電子郵件" %}
+	</div>
+</div>
+{% endblock %}

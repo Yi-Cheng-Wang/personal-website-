@@ -1,0 +1,15 @@
+{% extends "tw/base.html" %}
+
+{% block title %}400｜yichengs{% endblock %}
+
+{% block content %}
+<section class="container error-page">
+	{% include "shared/mark.html" %}
+	<p class="error-code">ERROR 400</p>
+	<h1>請求有誤</h1>
+	<p>伺服器無法理解這個請求，請確認網址後再試一次。</p>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% url 'index' %}">回到首頁 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

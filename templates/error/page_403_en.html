@@ -1,0 +1,15 @@
+{% extends "en/base.html" %}
+
+{% block title %}403｜yichengs{% endblock %}
+
+{% block content %}
+<section class="container error-page">
+	{% include "shared/mark.html" %}
+	<p class="error-code">ERROR 403</p>
+	<h1>Access denied</h1>
+	<p>You do not have permission to view this page.</p>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% url 'index_en' %}">Back to home <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

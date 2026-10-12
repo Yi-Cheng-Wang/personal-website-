@@ -1,0 +1,106 @@
+{% extends "tw/base.html" %}
+{% load static %}
+
+{% block title %}關於我｜王羿程 Yi-Cheng Wang{% endblock %}
+{% block description %}王羿程的研究領域、學歷、經歷、卓越表現與目前現況。{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">About</p>
+		<h1>關於我<span class="dot">.</span></h1>
+		<p class="page-lead">包含研究領域、學歷、個人經歷、卓越表現、目前現況等。</p>
+	</div>
+</header>
+
+<div class="container about-grid">
+	<aside class="profile">
+		<div class="frame"><img src="{% static 'images/index/pic00.jpg' %}" style="--pos: 80% 35%" alt="王羿程" width="2000" height="1500"></div>
+		<h2>王羿程</h2>
+		<p class="profile-en">Yi-Cheng Wang</p>
+		<ul class="kv">
+			<li><span class="k">學校</span><span>成大資工 · 大三</span></li>
+			<li><span class="k">來自</span><span>高雄</span></li>
+			<li><span class="k">Email</span><a href="mailto:me@yichengs.tw">me@yichengs.tw</a></li>
+		</ul>
+		<div class="actions">
+			<a class="btn btn-ghost" href="{% url 'about_links' %}">相關連結 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+		</div>
+	</aside>
+
+	<div class="about-body">
+		<section class="block reveal" aria-labelledby="now">
+			<h2 id="now"><span class="section-index">01</span>現在</h2>
+			<ul class="role-list">
+				<li><span class="when">2025 – 至今</span><span class="what">Codpy <span>總召</span></span></li>
+				<li><span class="when">2025</span><span class="what">MOPCON 2025 <span>總召</span></span></li>
+				<li><span class="when">就讀中</span><span class="what">國立成功大學 資訊工程學系 <span>大三</span></span></li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="education">
+			<h2 id="education"><span class="section-index">02</span>學歷</h2>
+			<ol class="timeline">
+				<li class="is-current"><span class="tl-when">大學 · 就讀中</span><span class="tl-title">國立成功大學 資訊工程學系</span><p class="tl-sub">大三</p></li>
+				<li><span class="tl-when">高中 · 畢業</span><span class="tl-title">國立鳳新高中</span></li>
+				<li><span class="tl-when">國中 · 畢業</span><span class="tl-title">高雄市立陽明國中</span></li>
+				<li><span class="tl-when">國小 · 畢業</span><span class="tl-title">高雄市立陽明國小</span></li>
+			</ol>
+		</section>
+
+		<section class="block reveal" aria-labelledby="experience">
+			<h2 id="experience"><span class="section-index">03</span>個人經歷</h2>
+			<ol class="timeline">
+				<li class="is-current"><span class="tl-when">2025 – 至今</span><span class="tl-title">Codpy 總召</span></li>
+				<li><span class="tl-when">2025</span><span class="tl-title">MOPCON 2025 總召</span></li>
+				<li><span class="tl-title">鳳新高中 112 學科能力競賽出題者</span></li>
+				<li><span class="tl-title">（知識貝果）2022 未來領袖知識跨年講座總召</span></li>
+				<li><span class="tl-title">網頁設計實務成果發表優異</span></li>
+			</ol>
+		</section>
+
+		<section class="block reveal" aria-labelledby="awards">
+			<h2 id="awards"><span class="section-index">04</span>卓越表現</h2>
+			<ul class="list-plain">
+				<li>111 學年度學科能力競賽資訊科複賽 第五區 佳作</li>
+				<li>聯合盃全國作文大賽 高雄區初賽 高中職組 佳作</li>
+				<li>國中科展市賽 地球科學科 第二名</li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="skills">
+			<h2 id="skills"><span class="section-index">05</span>專長與興趣</h2>
+			<div class="skill-groups">
+				<div><h3>專長</h3><ul class="chips"><li>機器學習</li><li>深度學習</li><li>資料分析</li></ul></div>
+				<div><h3>研究領域</h3><ul class="chips"><li>人工智慧</li><li>機器學習</li><li>機器人</li></ul></div>
+				<div><h3>興趣</h3><ul class="chips"><li>寫程式</li><li>生物研究</li><li>烹飪烘焙</li></ul></div>
+			</div>
+			<a class="cert-inline" href="https://www.credential.net/embed/2bf9985a-6081-410f-abb5-5e8c700b5f62" target="_blank" rel="noopener"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/79249658" alt="王羿程的 TensorFlow Developer Certificate" loading="lazy"></a>
+		</section>
+
+		<section class="block reveal" aria-labelledby="works">
+			<h2 id="works"><span class="section-index">06</span>作品</h2>
+			<ul class="list-plain">
+				<li>推播系統</li>
+				<li>飛行的球</li>
+				<li>217 google meet URL online</li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="intro">
+			<h2 id="intro"><span class="section-index">07</span>自我介紹</h2>
+			<div class="prose">
+				<p>大家好，我是王羿程，來自高雄。熱愛吃美食的我，總是認真地把每天消耗掉的熱量吃回來，所以一直瘦不下來。對於迷路有著獨特的見解，也就是「看著地圖也會迷路」。沒錯，我看著地圖也會迷路，不要問我為什麼。雖然我生日常常在端午節，但我不喜歡粽子，尤其是有包蛋黃。因為我會做很多食物，所以也能認出很多甜點，請不要訝異，例如：「哇！王羿程，你怎麼知道的！」</p>
+				<div>
+					<h3>目前狀況</h3>
+					<p>目前在成大資工念大三，專注在人工智慧、機器學習與機器人，同時擔任 Codpy 總召。有想一起研究東西或耍廢，都歡迎找我。</p>
+				</div>
+				<div>
+					<h3>未來規劃</h3>
+					<p>想把醫學和人工智慧結合在一起，看來還有一大段路要走。</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "tw/base.html" %}
+
+{% block title %}網站歷史｜王羿程 Yi-Cheng Wang{% endblock %}
+{% block description %}yichengs.tw 從上線到現在的更新紀錄。{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Changelog</p>
+		<h1>網站歷史<span class="dot">.</span></h1>
+		<p class="page-lead">從第一顆飛行的球到現在，這個網站的每一次重要更新。</p>
+	</div>
+</header>
+
+<div class="container">
+	<ol class="history" reversed>
+		<li class="reveal">
+			<time datetime="2026-10-12">2026.10.12</time>
+			<p class="h-desc">網站全新改版：全新的設計與 logo，並更新個人資訊。</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="重要程度 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-06-09">2023.06.09</time>
+			<p class="h-desc">網站迎來第一次大更新！</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="重要程度 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-04-20">2023.04.20</time>
+			<p class="h-desc">網站啟用 https。</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="重要程度 6/10"><span style="--v:6"></span></span>06/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-02-26">2023.02.26</time>
+			<p class="h-desc">網站第一次正式上線，網址是 http://yichengs.tw，還沒有 https。</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="重要程度 10/10"><span style="--v:10"></span></span>10/10</div>
+		</li>
+		<li class="reveal">
+			<time datetime="2023-02-11">2023.02.11</time>
+			<p class="h-desc">網站第一次上線，當時甚至還沒啟用網址，也只能顯示飛行的球（我做的遊戲）。</p>
+			<div class="h-score"><span class="meter" role="img" aria-label="重要程度 8/10"><span style="--v:8"></span></span>08/10</div>
+		</li>
+	</ol>
+</div>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "en/base.html" %}
+{% load static %}
+
+{% block title %}About｜Yi-Cheng Wang{% endblock %}
+{% block description %}Yi-Cheng Wang's research fields, education, experience, achievements and current status.{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">About</p>
+		<h1>About me<span class="dot">.</span></h1>
+		<p class="page-lead">Research fields, educational background, personal experience, outstanding performance and current status.</p>
+	</div>
+</header>
+
+<div class="container about-grid">
+	<aside class="profile">
+		<div class="frame"><img src="{% static 'images/index/pic00.jpg' %}" style="--pos: 80% 35%" alt="Yi-Cheng Wang" width="2000" height="1500"></div>
+		<h2>Yi-Cheng Wang</h2>
+		<p class="profile-en">王羿程</p>
+		<ul class="kv">
+			<li><span class="k">School</span><span>NCKU CSIE · Junior</span></li>
+			<li><span class="k">From</span><span>Kaohsiung, Taiwan</span></li>
+			<li><span class="k">Email</span><a href="mailto:me@yichengs.tw">me@yichengs.tw</a></li>
+		</ul>
+		<div class="actions">
+			<a class="btn btn-ghost" href="{% url 'about_links_en' %}">Links <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+		</div>
+	</aside>
+
+	<div class="about-body">
+		<section class="block reveal" aria-labelledby="now">
+			<h2 id="now"><span class="section-index">01</span>Now</h2>
+			<ul class="role-list">
+				<li><span class="when">2025 – Present</span><span class="what">Codpy <span>General Convener</span></span></li>
+				<li><span class="when">2025</span><span class="what">MOPCON 2025 <span>General Convener</span></span></li>
+				<li><span class="when">Enrolled</span><span class="what">NCKU CSIE <span>Junior</span></span></li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="education">
+			<h2 id="education"><span class="section-index">02</span>Education</h2>
+			<ol class="timeline">
+				<li class="is-current"><span class="tl-when">College · Enrolled</span><span class="tl-title">National Cheng Kung University</span><p class="tl-sub">Department of Computer Science and Information Engineering · Junior</p></li>
+				<li><span class="tl-when">High School · Graduated</span><span class="tl-title">National Feng-Hsin Senior High School</span></li>
+				<li><span class="tl-when">Junior High · Graduated</span><span class="tl-title">Kaohsiung Municipal Yang-Ming Junior High School</span></li>
+				<li><span class="tl-when">Elementary · Graduated</span><span class="tl-title">Kaohsiung Municipal Yang-Ming Primary School</span></li>
+			</ol>
+		</section>
+
+		<section class="block reveal" aria-labelledby="experience">
+			<h2 id="experience"><span class="section-index">03</span>Experience</h2>
+			<ol class="timeline">
+				<li class="is-current"><span class="tl-when">2025 – Present</span><span class="tl-title">General Convener, Codpy</span></li>
+				<li><span class="tl-when">2025</span><span class="tl-title">General Convener, MOPCON 2025</span></li>
+				<li><span class="tl-title">Question writer for the Feng-Hsin Senior High School 112 Subject Ability Competition (學科能力競賽)</span></li>
+				<li><span class="tl-title">General Convener of the (Knowledge Bagel) 2022 Future Leaders Knowledge Cross-Year Seminar</span></li>
+				<li><span class="tl-title">Excellent presentation of practical achievements in web design</span></li>
+			</ol>
+		</section>
+
+		<section class="block reveal" aria-labelledby="awards">
+			<h2 id="awards"><span class="section-index">04</span>Outstanding performance</h2>
+			<ul class="list-plain">
+				<li>111 Subject Ability Competition (學科能力競賽) Semi-final, Computer Science, the Fifth District — Honorable Mention</li>
+				<li>National Lian-He-Bei Essay Competition, Kaohsiung District Preliminary, High School Group — Honorable Mention</li>
+				<li>Junior High School Science Fair, City Competition, Earth Science — Second Place</li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="skills">
+			<h2 id="skills"><span class="section-index">05</span>Skills &amp; interests</h2>
+			<div class="skill-groups">
+				<div><h3>Expertise</h3><ul class="chips"><li>Machine learning</li><li>Deep learning</li><li>Data analysis</li></ul></div>
+				<div><h3>Research fields</h3><ul class="chips"><li>Artificial intelligence</li><li>Machine learning</li><li>Robotics</li></ul></div>
+				<div><h3>Interests</h3><ul class="chips"><li>Programming</li><li>Biological research</li><li>Cooking and baking</li></ul></div>
+			</div>
+			<a class="cert-inline" href="https://www.credential.net/embed/2bf9985a-6081-410f-abb5-5e8c700b5f62" target="_blank" rel="noopener"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/79249658" alt="Yi-Cheng Wang's TensorFlow Developer Certificate" loading="lazy"></a>
+		</section>
+
+		<section class="block reveal" aria-labelledby="works">
+			<h2 id="works"><span class="section-index">06</span>Works</h2>
+			<ul class="list-plain">
+				<li>Push notification system</li>
+				<li>Flying ball</li>
+				<li>217 google meet URL online</li>
+			</ul>
+		</section>
+
+		<section class="block reveal" aria-labelledby="intro">
+			<h2 id="intro"><span class="section-index">07</span>Self-introduction</h2>
+			<div class="prose">
+				<p>Hello everyone, I'm Yi-Cheng Wang from Kaohsiung. I have a passion for food and always make sure to eat back the calories I burn each day, which is why I have trouble losing weight. I have a unique perspective when it comes to getting lost: I can get lost even while looking at a map. Yes, it's true — please don't ask me why. Although my birthday often falls on the Dragon Boat Festival, I don't like rice dumplings, especially those with salted egg yolks. Since I can make a variety of dishes, I can also recognize many desserts, so please don't be surprised and say, "Wow! Yi-Cheng, how did you know!"</p>
+				<div>
+					<h3>Current status</h3>
+					<p>I'm currently a junior at NCKU CSIE, focusing on artificial intelligence, machine learning and robotics, and serving as the General Convener of Codpy. If you'd like to research something together or just hang out, feel free to reach out.</p>
+				</div>
+				<div>
+					<h3>Future plans</h3>
+					<p>I want to combine medicine and artificial intelligence — and it seems there is still a long way to go.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "en/base.html" %}
+
+{% block title %}404｜yichengs{% endblock %}
+
+{% block content %}
+<section class="container error-page">
+	{% include "shared/mark.html" %}
+	<p class="error-code">ERROR 404</p>
+	<h1>This page is not available in English</h1>
+	<p>Sorry, this page does not exist or is currently not available in English.</p>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% url 'index_en' %}">Back to home <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

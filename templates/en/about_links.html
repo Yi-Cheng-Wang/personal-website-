@@ -1,0 +1,20 @@
+{% extends "en/base.html" %}
+
+{% block title %}Links｜Yi-Cheng Wang{% endblock %}
+{% block description %}Yi-Cheng Wang on GitHub, GitLab, LinkedIn, Facebook, Instagram and Discord.{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Links</p>
+		<h1>Related links<span class="dot">.</span></h1>
+		<p class="page-lead">My personal GitLab, as well as GitHub, Facebook, Instagram and other platforms.</p>
+	</div>
+</header>
+
+<div class="container">
+	<div class="links-grid">
+		{% include "shared/link_cards.html" with site_label="Personal website" site_en_label="Personal website (English)" source_label="Website source code" gitlab_label="Personal GitLab" facebook_handle="Profile" discord_handle="Profile" email_label="Email" %}
+	</div>
+</div>
+{% endblock %}

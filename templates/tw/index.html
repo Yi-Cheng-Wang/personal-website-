@@ -1,0 +1,122 @@
+{% extends "tw/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+	<div class="container hero-grid">
+		<div class="hero-copy">
+			<p class="eyebrow">NCKU CSIE · 大三</p>
+			<h1 class="hero-title">王羿程<span class="dot">.</span><span class="sub">Yi-Cheng Wang</span></h1>
+			<p class="hero-lead">就讀國立成功大學資訊工程學系三年級，專注於人工智慧、機器學習與機器人。MOPCON 2025 總召，2025 年起擔任 Codpy 總召。</p>
+			<div class="actions">
+				<a class="btn btn-primary" href="{% url 'about_me' %}">關於我 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+				<a class="btn btn-ghost" href="{% url 'about_links' %}">相關連結</a>
+			</div>
+		</div>
+
+		<figure class="hero-media" data-slider>
+			<div class="frame">
+				<img class="is-active" src="{% static 'images/index/pic00.jpg' %}" style="--pos: 82% 40%" alt="王羿程的旅遊生活照" width="2000" height="1500">
+				<img src="{% static 'images/index/pic01.jpg' %}" style="--pos: 48% 50%" alt="王羿程在海邊比 YA" width="4080" height="3072" loading="lazy">
+				<img src="{% static 'images/index/pic02.jpg' %}" style="--pos: 30% 50%" alt="王羿程在公園散步" width="2605" height="1961" loading="lazy">
+				<img src="{% static 'images/index/pic03.jpg' %}" style="--pos: 42% 50%" alt="王羿程躺在階梯上" width="4080" height="3072" loading="lazy">
+			</div>
+			<figcaption class="frame-bar">
+				<span>IMG <span data-slide-index>01</span> / 04</span>
+				<span class="frame-ctrl">
+					<button class="icon-btn" type="button" data-slide-prev aria-label="上一張照片"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+					<button class="icon-btn" type="button" data-slide-next aria-label="下一張照片"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+				</span>
+			</figcaption>
+		</figure>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-index">01</span>
+			<h2>現在</h2>
+		</header>
+		<div class="grid-3">
+			<article class="card now-card reveal">
+				<span class="card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+				<p class="card-k">NCKU CSIE</p>
+				<h3>國立成功大學<br>資訊工程學系</h3>
+				<p class="card-meta">大三 · 就讀中</p>
+			</article>
+			<article class="card now-card reveal">
+				<span class="card-icon"><i class="fas fa-microphone" aria-hidden="true"></i></span>
+				<p class="card-k">2025</p>
+				<h3>MOPCON 2025</h3>
+				<p class="card-meta">總召</p>
+			</article>
+			<article class="card now-card reveal">
+				<span class="card-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+				<p class="card-k">2025 – 至今</p>
+				<h3>Codpy</h3>
+				<p class="card-meta">總召</p>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-index">02</span>
+			<h2>專長與研究</h2>
+		</header>
+		<div class="focus-grid">
+			<div class="card focus-list reveal">
+				<div>
+					<h3>專長</h3>
+					<ul class="chips"><li>機器學習</li><li>深度學習</li><li>資料分析</li></ul>
+				</div>
+				<div>
+					<h3>研究領域</h3>
+					<ul class="chips"><li>人工智慧</li><li>機器學習</li><li>機器人</li></ul>
+				</div>
+			</div>
+			<a class="card cert-card reveal" href="https://www.credential.net/embed/2bf9985a-6081-410f-abb5-5e8c700b5f62" target="_blank" rel="noopener">
+				<p class="card-k">證照</p>
+				<span class="cert-name">TensorFlow Developer Certificate</span>
+				<img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/79249658" alt="王羿程的 TensorFlow Developer Certificate" loading="lazy">
+				<span class="cert-link">查看證書 <i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-index">03</span>
+			<h2>部落格</h2>
+			<p class="section-sub">我所撰寫的文章，分類整理中。</p>
+		</header>
+		<div class="grid-3">
+			<article class="card tile reveal">
+				<i class="fas fa-utensils" aria-hidden="true"></i>
+				<div><h3>吃喝玩樂</h3><span class="tag">籌備中</span></div>
+			</article>
+			<article class="card tile reveal">
+				<i class="fas fa-paper-plane" aria-hidden="true"></i>
+				<div><h3>生活瑣事</h3><span class="tag">籌備中</span></div>
+			</article>
+			<article class="card tile reveal">
+				<i class="fas fa-book" aria-hidden="true"></i>
+				<div><h3>學術相關</h3><span class="tag">籌備中</span></div>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="band" aria-label="最新消息">
+	<div class="container band-inner">
+		<time datetime="2026-10-12">2026.10.12</time>
+		<p>網站全新改版，換上新的 logo。</p>
+		<a href="{% url 'history_web' %}">網站歷史 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

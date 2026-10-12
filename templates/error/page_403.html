@@ -1,0 +1,15 @@
+{% extends "tw/base.html" %}
+
+{% block title %}403｜yichengs{% endblock %}
+
+{% block content %}
+<section class="container error-page">
+	{% include "shared/mark.html" %}
+	<p class="error-code">ERROR 403</p>
+	<h1>沒有存取權限</h1>
+	<p>你沒有權限瀏覽這個頁面。</p>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% url 'index' %}">回到首頁 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+</section>
+{% endblock %}

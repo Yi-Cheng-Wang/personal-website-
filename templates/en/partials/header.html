@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+	<div class="container header-inner">
+		<a class="brand" href="{% url 'index_en' %}" aria-label="yichengs home">{% include "shared/logo.html" %}</a>
+		<nav class="nav" id="site-nav" aria-label="Main">
+			<ul>
+				<li><a href="{% url 'index_en' %}"{% if page == 'index_en' %} aria-current="page"{% endif %}>Home</a></li>
+				<li><a href="{% url 'about_me_en' %}"{% if page == 'about_me_en' %} aria-current="page"{% endif %}>About</a></li>
+				<li><a href="{% url 'about_links_en' %}"{% if page == 'about_links_en' %} aria-current="page"{% endif %}>Links</a></li>
+				<li><a href="{% url 'history_web_en' %}"{% if page == 'history_web_en' %} aria-current="page"{% endif %}>History</a></li>
+			</ul>
+		</nav>
+		<div class="header-actions">
+			<a class="lang-switch" href="{{ alt_url }}" hreflang="zh-Hant" lang="zh-Hant" title="中文">中文</a>
+			<button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i></button>
+			<button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+		</div>
+	</div>
+</header>
