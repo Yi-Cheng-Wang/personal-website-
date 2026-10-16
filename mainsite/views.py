@@ -52,14 +52,21 @@ def page_not_found(request, exception):
 def server_error(request):
     return _page(request, 'error/page_500_en.html' if _is_en(request) else 'error/page_500.html', 500)
 
-#搜尋引擎
+#搜尋引擎與 AI
 SITE_URL = 'https://yichengs.tw'
+# 不是頁面的路由，不列進 sitemap / llms.txt
+NON_PAGE_ROUTES = ('sitemap', 'robots_txt', 'llms_txt')
+# llms.txt 的連結名稱；沒列到的頁面會用網址代替
+PAGE_LABELS = {
+    'index': '首頁', 'about_me': '關於我', 'about_links': '相關連結', 'history_web': '網站歷史',
+    'index_en': 'Home', 'about_me_en': 'About', 'about_links_en': 'Links', 'history_web_en': 'Site history',
+}
 
 def _public_pages():
     """從 urls.py 自動找出公開頁面：有名稱、沒有網址參數、不在 hidden/ 底下。"""
     for pattern in get_resolver().url_patterns:
         if (isinstance(pattern, URLPattern) and pattern.name
-                and pattern.name not in ('sitemap', 'robots_txt')
+                and pattern.name not in NON_PAGE_ROUTES
                 and pattern.pattern.regex.groups == 0
                 and not str(pattern.pattern).startswith('hidden/')):
             yield pattern.name
@@ -79,13 +86,21 @@ def sitemap(request):
     return render(request, 'sitemap.xml', {'pages': pages}, content_type='application/xml')
 
 def robots_txt(request):
+    # 所有搜尋引擎與 AI 爬蟲（GPTBot、ClaudeBot、Google-Extended 等）一律允許
     lines = [
+        '# All search engines and AI crawlers are welcome.',
         'User-agent: *',
-        'Disallow: /hidden/',
+        'Allow: /',
         '',
         f"Sitemap: {SITE_URL}{reverse('sitemap')}",
     ]
-    return HttpResponse('\n'.join(lines) + '\n', content_type='text/plain')
+    return HttpResponse('\n'.join(lines) + '\n', content_type='text/plain; charset=utf-8')
+
+def llms_txt(request):
+    pages = [{'label': PAGE_LABELS.get(name, reverse(name)), 'url': SITE_URL + reverse(name), 'en': name.endswith('_en')}
+             for name in _public_pages()]
+    context = {'tw_pages': [p for p in pages if not p['en']], 'en_pages': [p for p in pages if p['en']]}
+    return render(request, 'llms.txt', context, content_type='text/plain; charset=utf-8')
 
 #其他
 def generic(request):

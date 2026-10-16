@@ -31,9 +31,10 @@ urlpatterns = [
     path('history/web/en/', views.history_web_en, name='history_web_en'),
     #機器人專區
     
-    #搜尋引擎
+    #搜尋引擎與 AI
     path('sitemap.xml', views.sitemap, name='sitemap'),
     path('robots.txt', views.robots_txt, name='robots_txt'),
+    path('llms.txt', views.llms_txt, name='llms_txt'),
 
     #其他
     path('hidden/generic/', views.generic, name='generic'),
