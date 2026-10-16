@@ -1,7 +1,7 @@
 {% autoescape off %}# yichengs — 王羿程 Yi-Cheng Wang
 
-> 王羿程（Yi-Cheng Wang，綽號 yichengs）的個人網站。國立成功大學資訊工程學系大三，專注於人工智慧、機器學習與機器人；Codpy 總召、MOPCON 2025 總召。
-> Personal website of Yi-Cheng Wang (a.k.a. yichengs), a junior at National Cheng Kung University, Department of Computer Science and Information Engineering (NCKU CSIE), focusing on artificial intelligence, machine learning and robotics; General Convener of Codpy and MOPCON 2025.
+> 王羿程（Yi-Cheng Wang，綽號 yichengs）的個人網站。國立成功大學資訊工程學系大三，專注於人工智慧、機器學習與機器人；Codpy 總召、成大鐵道研究社副社長、MOPCON 2025 總召。
+> Personal website of Yi-Cheng Wang (a.k.a. yichengs), a junior at National Cheng Kung University, Department of Computer Science and Information Engineering (NCKU CSIE), focusing on artificial intelligence, machine learning and robotics; General Convener of Codpy, Vice President of the NCKU Railway Research Club, and General Convener of MOPCON 2025.
 
 ## 中文頁面
 
