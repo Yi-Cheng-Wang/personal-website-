@@ -1,5 +1,6 @@
+from django.http import HttpResponse
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import URLPattern, get_resolver, reverse
 
 # Create your views here.
 
@@ -50,6 +51,41 @@ def page_not_found(request, exception):
     return _page(request, 'error/not_support_en.html' if _is_en(request) else 'error/page_404.html', 404)
 def server_error(request):
     return _page(request, 'error/page_500_en.html' if _is_en(request) else 'error/page_500.html', 500)
+
+#搜尋引擎
+SITE_URL = 'https://yichengs.tw'
+
+def _public_pages():
+    """從 urls.py 自動找出公開頁面：有名稱、沒有網址參數、不在 hidden/ 底下。"""
+    for pattern in get_resolver().url_patterns:
+        if (isinstance(pattern, URLPattern) and pattern.name
+                and pattern.name not in ('sitemap', 'robots_txt')
+                and pattern.pattern.regex.groups == 0
+                and not str(pattern.pattern).startswith('hidden/')):
+            yield pattern.name
+
+def sitemap(request):
+    pages = []
+    for name in _public_pages():
+        alternates = []
+        if name in LANGUAGE_PAIRS:
+            tw, en = (LANGUAGE_PAIRS[name], name) if name.endswith('_en') else (name, LANGUAGE_PAIRS[name])
+            alternates = [
+                {'lang': 'zh-Hant', 'href': SITE_URL + reverse(tw)},
+                {'lang': 'en', 'href': SITE_URL + reverse(en)},
+                {'lang': 'x-default', 'href': SITE_URL + reverse(tw)},
+            ]
+        pages.append({'loc': SITE_URL + reverse(name), 'alternates': alternates})
+    return render(request, 'sitemap.xml', {'pages': pages}, content_type='application/xml')
+
+def robots_txt(request):
+    lines = [
+        'User-agent: *',
+        'Disallow: /hidden/',
+        '',
+        f"Sitemap: {SITE_URL}{reverse('sitemap')}",
+    ]
+    return HttpResponse('\n'.join(lines) + '\n', content_type='text/plain')
 
 #其他
 def generic(request):
