@@ -1,0 +1,24 @@
+{% load static %}
+<section class="bizcard" aria-labelledby="bizcard-title">
+	<header class="section-head reveal">
+		<span class="section-index">CARD</span>
+		<h2 id="bizcard-title">{% if lang == "en" %}Business card{% else %}電子名片{% endif %}</h2>
+		<p class="section-sub">{% if lang == "en" %}The website, email, phone and LINE on the PDF are all clickable.{% else %}PDF 名片上的網站、Email、電話與 LINE 都可以直接點擊。{% endif %}</p>
+	</header>
+	<div class="bizcard-grid">
+		<figure class="bizcard-face reveal">
+			<img src="{% static 'images/card/card-front.png' %}" width="1200" height="720" loading="lazy"
+				alt="{% if lang == "en" %}Front of Yi-Cheng Wang's business card: NCKU CSIE; General Convener of Codpy, Vice President of the Railway Research Club, General Convener of MOPCON; email me@yichengs.tw, phone 0975-287-586, LINE ID yichengs{% else %}王羿程的名片正面：國立成功大學資訊工程學系；Codpy 總召、鐵道研究社副社長、MOPCON 總召；Email me@yichengs.tw、電話 0975-287-586、LINE ID yichengs{% endif %}">
+			<figcaption>{% if lang == "en" %}Front{% else %}正面{% endif %}</figcaption>
+		</figure>
+		<figure class="bizcard-face reveal">
+			<img src="{% static 'images/card/card-back.png' %}" width="1200" height="720" loading="lazy"
+				alt="{% if lang == "en" %}Back of the business card: YICHENGS logo, AI / ML / Robotics, and a QR code to yichengs.tw{% else %}名片背面：YICHENGS logo、AI / ML / ROBOTICS，以及連到 yichengs.tw 的 QR code{% endif %}">
+			<figcaption>{% if lang == "en" %}Back{% else %}背面{% endif %}</figcaption>
+		</figure>
+	</div>
+	<div class="actions">
+		<a class="btn btn-primary" href="{% static 'images/card/yichengs-business-card.pdf' %}" download="yichengs-business-card.pdf">{% if lang == "en" %}Download PDF{% else %}下載 PDF 名片{% endif %} <i class="fas fa-download" aria-hidden="true"></i></a>
+		<a class="btn btn-ghost" href="{% static 'images/card/yichengs-business-card.pdf' %}" target="_blank" rel="noopener">{% if lang == "en" %}Open in new tab{% else %}在新分頁開啟{% endif %}</a>
+	</div>
+</section>

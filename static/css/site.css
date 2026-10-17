@@ -743,6 +743,30 @@ h1, h2, h3 {
 .link-card .lc-arrow { color: var(--muted); font-size: .85rem; transition: transform .2s ease, color .2s ease; }
 .link-card:hover .lc-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
+/* ---------- Business card ---------- */
+.bizcard { padding-bottom: clamp(64px, 9vw, 112px); }
+.bizcard-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+.bizcard-face { margin: 0; }
+.bizcard-face img {
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(20, 22, 27, .06), 0 20px 40px -24px rgba(20, 22, 27, .45);
+}
+.bizcard-face figcaption {
+	margin-top: 12px;
+	font-family: var(--font-mono);
+	font-size: .78rem;
+	letter-spacing: .06em;
+	color: var(--muted);
+}
+.bizcard .actions { margin-top: 32px; }
+
 /* ---------- History ---------- */
 .history { list-style: none; padding: clamp(40px, 6vw, 72px) 0 clamp(64px, 9vw, 112px); }
 .history li {
@@ -871,6 +895,7 @@ h1, h2, h3 {
 	.now-card { min-height: 0; }
 	.now-card .card-icon { margin-bottom: 18px; }
 	.focus-grid { grid-template-columns: 1fr; }
+	.bizcard-grid { grid-template-columns: 1fr; max-width: 560px; }
 	.about-grid { grid-template-columns: 1fr; }
 	.profile { position: static; display: grid; grid-template-columns: 160px 1fr; column-gap: 24px; align-items: start; }
 	.profile .frame { grid-row: span 4; }
