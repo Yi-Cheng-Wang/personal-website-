@@ -22,12 +22,14 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/me/', views.about_me, name='about_me'),
     path('about/links/', views.about_links, name='about_links'),
+    path('about/card/', views.about_card, name='about_card'),
     path('history/web/', views.history_web, name='history_web'),
     
     #英文專區
     path('en/', views.index_en, name='index_en'),
     path('about/me/en/', views.about_me_en, name='about_me_en'),
     path('about/links/en/', views.about_links_en, name='about_links_en'),
+    path('about/card/en/', views.about_card_en, name='about_card_en'),
     path('history/web/en/', views.history_web_en, name='history_web_en'),
     #機器人專區
     

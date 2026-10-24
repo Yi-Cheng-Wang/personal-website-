@@ -13,9 +13,9 @@
 </header>
 
 <div class="container">
+	{% url 'about_card' as card_url %}
 	<div class="links-grid">
-		{% include "shared/link_cards.html" with site_label="個人網站" site_en_label="個人網站（英文）" source_label="網站原始碼" facebook_handle="個人頁面" discord_handle="個人檔案" email_label="電子郵件" %}
+		{% include "shared/link_cards.html" with site_label="個人網站" site_en_label="個人網站（英文）" source_label="網站原始碼" facebook_handle="個人頁面" discord_handle="個人檔案" email_label="電子郵件" card_label="電子名片" card_handle="PDF 下載" %}
 	</div>
-	{% include "shared/business_card.html" with lang="tw" %}
 </div>
 {% endblock %}

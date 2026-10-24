@@ -1,0 +1,18 @@
+{% extends "en/base.html" %}
+
+{% block title %}Business card｜Yi-Cheng Wang{% endblock %}
+{% block description %}Yi-Cheng Wang's business card as a downloadable PDF, with clickable website, email, phone and LINE links.{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Card</p>
+		<h1>Business card<span class="dot">.</span></h1>
+		<p class="page-lead">Download the PDF — the website, email, phone and LINE on it are all clickable.</p>
+	</div>
+</header>
+
+<div class="container">
+	{% include "shared/business_card.html" with lang="en" %}
+</div>
+{% endblock %}

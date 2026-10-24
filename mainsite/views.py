@@ -9,6 +9,7 @@ LANGUAGE_PAIRS = {
     'index': 'index_en',
     'about_me': 'about_me_en',
     'about_links': 'about_links_en',
+    'about_card': 'about_card_en',
     'history_web': 'history_web_en',
 }
 LANGUAGE_PAIRS.update({en: tw for tw, en in LANGUAGE_PAIRS.items()})
@@ -29,6 +30,8 @@ def about_me(request):
     return _page(request, 'tw/about_me.html')
 def about_links(request):
     return _page(request, 'tw/about_links.html')
+def about_card(request):
+    return _page(request, 'tw/about_card.html')
 def history_web(request):
     return _page(request, 'tw/history_web.html')
 
@@ -39,6 +42,8 @@ def about_me_en(request):
     return _page(request, 'en/about_me.html')
 def about_links_en(request):
     return _page(request, 'en/about_links.html')
+def about_card_en(request):
+    return _page(request, 'en/about_card.html')
 def history_web_en(request):
     return _page(request, 'en/history_web.html')
 
@@ -58,8 +63,9 @@ SITE_URL = 'https://yichengs.tw'
 NON_PAGE_ROUTES = ('sitemap', 'robots_txt', 'llms_txt')
 # llms.txt 的連結名稱；沒列到的頁面會用網址代替
 PAGE_LABELS = {
-    'index': '首頁', 'about_me': '關於我', 'about_links': '相關連結', 'history_web': '網站歷史',
-    'index_en': 'Home', 'about_me_en': 'About', 'about_links_en': 'Links', 'history_web_en': 'Site history',
+    'index': '首頁', 'about_me': '關於我', 'about_links': '相關連結', 'about_card': '電子名片', 'history_web': '網站歷史',
+    'index_en': 'Home', 'about_me_en': 'About', 'about_links_en': 'Links', 'about_card_en': 'Business card',
+    'history_web_en': 'Site history',
 }
 
 def _public_pages():

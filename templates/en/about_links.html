@@ -13,9 +13,9 @@
 </header>
 
 <div class="container">
+	{% url 'about_card_en' as card_url %}
 	<div class="links-grid">
-		{% include "shared/link_cards.html" with site_label="Personal website" site_en_label="Personal website (English)" source_label="Website source code" facebook_handle="Profile" discord_handle="Profile" email_label="Email" %}
+		{% include "shared/link_cards.html" with site_label="Personal website" site_en_label="Personal website (English)" source_label="Website source code" facebook_handle="Profile" discord_handle="Profile" email_label="Email" card_label="Business card" card_handle="PDF download" %}
 	</div>
-	{% include "shared/business_card.html" with lang="en" %}
 </div>
 {% endblock %}

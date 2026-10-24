@@ -1,10 +1,5 @@
 {% load static %}
-<section class="bizcard" aria-labelledby="bizcard-title">
-	<header class="section-head reveal">
-		<span class="section-index">CARD</span>
-		<h2 id="bizcard-title">{% if lang == "en" %}Business card{% else %}電子名片{% endif %}</h2>
-		<p class="section-sub">{% if lang == "en" %}The website, email, phone and LINE on the PDF are all clickable.{% else %}PDF 名片上的網站、Email、電話與 LINE 都可以直接點擊。{% endif %}</p>
-	</header>
+<section class="bizcard" aria-label="{% if lang == "en" %}Business card{% else %}電子名片{% endif %}">
 	<div class="bizcard-grid">
 		<figure class="bizcard-face reveal">
 			<img src="{% static 'images/card/card-front.png' %}?v=20261024" width="1200" height="720" loading="lazy"

@@ -1,0 +1,18 @@
+{% extends "tw/base.html" %}
+
+{% block title %}電子名片｜王羿程 Yi-Cheng Wang{% endblock %}
+{% block description %}王羿程的電子名片，可下載 PDF；名片上的網站、Email、電話與 LINE 都可以直接點擊。{% endblock %}
+
+{% block content %}
+<header class="page-head">
+	<div class="container">
+		<p class="eyebrow">Card</p>
+		<h1>電子名片<span class="dot">.</span></h1>
+		<p class="page-lead">下載 PDF 名片，上面的網站、Email、電話與 LINE 都可以直接點擊。</p>
+	</div>
+</header>
+
+<div class="container">
+	{% include "shared/business_card.html" with lang="tw" %}
+</div>
+{% endblock %}
