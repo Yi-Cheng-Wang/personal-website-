@@ -1,6 +1,13 @@
-from django.http import HttpResponse
+import logging
+
+from django.db import DatabaseError, connection
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.urls import URLPattern, get_resolver, reverse
+from django.views.decorators.cache import never_cache
+from django.views.decorators.http import require_safe
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 
@@ -57,10 +64,24 @@ def page_not_found(request, exception):
 def server_error(request):
     return _page(request, 'error/page_500_en.html' if _is_en(request) else 'error/page_500.html', 500)
 
+#健康檢查
+@require_safe
+@never_cache
+def healthcheck(request):
+    """給監控用：網站正常回 200；資料庫連不上回 503（不公開錯誤細節）。"""
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute('SELECT 1')
+            cursor.fetchone()
+    except DatabaseError:
+        logger.exception('healthcheck: database unavailable')
+        return JsonResponse({'status': 'error', 'database': 'error'}, status=503)
+    return JsonResponse({'status': 'ok', 'database': 'ok'})
+
 #搜尋引擎與 AI
 SITE_URL = 'https://yichengs.tw'
 # 不是頁面的路由，不列進 sitemap / llms.txt
-NON_PAGE_ROUTES = ('sitemap', 'robots_txt', 'llms_txt')
+NON_PAGE_ROUTES = ('sitemap', 'robots_txt', 'llms_txt', 'healthcheck')
 # llms.txt 的連結名稱；沒列到的頁面會用網址代替
 PAGE_LABELS = {
     'index': '首頁', 'about_me': '關於我', 'about_links': '相關連結', 'about_card': '電子名片', 'history_web': '網站歷史',

@@ -38,6 +38,9 @@ urlpatterns = [
     path('robots.txt', views.robots_txt, name='robots_txt'),
     path('llms.txt', views.llms_txt, name='llms_txt'),
 
+    #健康檢查（結尾不加斜線，避免監控工具遇到轉址）
+    path('healthcheck', views.healthcheck, name='healthcheck'),
+
     #其他
     path('hidden/generic/', views.generic, name='generic'),
     path('hidden/elements/', views.elements, name='elements'),
