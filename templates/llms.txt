@@ -18,6 +18,6 @@
 - [LinkedIn](https://www.linkedin.com/in/yi-cheng-wang): in/yi-cheng-wang
 - [Facebook](https://www.facebook.com/profile.php?id=100008455152951): posts and articles
 - [Instagram](https://www.instagram.com/yichengs.tw): @yichengs.tw
-- [LINE](https://line.me/ti/p/~yichengs): ID yichengs
+- [LINE](https://line.me/ti/p/~yichengs.tw): ID yichengs.tw
 - [Discord](https://discordapp.com/users/557939372880691223)
 - [Email](mailto:me@yichengs.tw): me@yichengs.tw{% endautoescape %}

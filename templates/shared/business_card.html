@@ -7,18 +7,18 @@
 	</header>
 	<div class="bizcard-grid">
 		<figure class="bizcard-face reveal">
-			<img src="{% static 'images/card/card-front.png' %}" width="1200" height="720" loading="lazy"
-				alt="{% if lang == "en" %}Front of Yi-Cheng Wang's business card: NCKU CSIE; General Convener of Codpy, Vice President of the Railway Research Club, General Convener of MOPCON; email me@yichengs.tw, phone 0975-287-586, LINE ID yichengs{% else %}王羿程的名片正面：國立成功大學資訊工程學系；Codpy 總召、鐵道研究社副社長、MOPCON 總召；Email me@yichengs.tw、電話 0975-287-586、LINE ID yichengs{% endif %}">
+			<img src="{% static 'images/card/card-front.png' %}?v=20261024" width="1200" height="720" loading="lazy"
+				alt="{% if lang == "en" %}Front of Yi-Cheng Wang's business card: NCKU CSIE; General Convener of Codpy, Vice President of the Railway Research Club, General Convener of MOPCON; email me@yichengs.tw, phone 0975-287-586, LINE ID yichengs.tw{% else %}王羿程的名片正面：國立成功大學資訊工程學系；Codpy 總召、鐵道研究社副社長、MOPCON 總召；Email me@yichengs.tw、電話 0975-287-586、LINE ID yichengs.tw{% endif %}">
 			<figcaption>{% if lang == "en" %}Front{% else %}正面{% endif %}</figcaption>
 		</figure>
 		<figure class="bizcard-face reveal">
-			<img src="{% static 'images/card/card-back.png' %}" width="1200" height="720" loading="lazy"
+			<img src="{% static 'images/card/card-back.png' %}?v=20261024" width="1200" height="720" loading="lazy"
 				alt="{% if lang == "en" %}Back of the business card: YICHENGS logo, AI / ML / Robotics, and a QR code to yichengs.tw{% else %}名片背面：YICHENGS logo、AI / ML / ROBOTICS，以及連到 yichengs.tw 的 QR code{% endif %}">
 			<figcaption>{% if lang == "en" %}Back{% else %}背面{% endif %}</figcaption>
 		</figure>
 	</div>
 	<div class="actions">
-		<a class="btn btn-primary" href="{% static 'images/card/yichengs-business-card.pdf' %}" download="yichengs-business-card.pdf">{% if lang == "en" %}Download PDF{% else %}下載 PDF 名片{% endif %} <i class="fas fa-download" aria-hidden="true"></i></a>
-		<a class="btn btn-ghost" href="{% static 'images/card/yichengs-business-card.pdf' %}" target="_blank" rel="noopener">{% if lang == "en" %}Open in new tab{% else %}在新分頁開啟{% endif %}</a>
+		<a class="btn btn-primary" href="{% static 'images/card/yichengs-business-card.pdf' %}?v=20261024" download="yichengs-business-card.pdf">{% if lang == "en" %}Download PDF{% else %}下載 PDF 名片{% endif %} <i class="fas fa-download" aria-hidden="true"></i></a>
+		<a class="btn btn-ghost" href="{% static 'images/card/yichengs-business-card.pdf' %}?v=20261024" target="_blank" rel="noopener">{% if lang == "en" %}Open in new tab{% else %}在新分頁開啟{% endif %}</a>
 	</div>
 </section>
