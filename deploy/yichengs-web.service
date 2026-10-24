@@ -1,0 +1,27 @@
+# yichengs.tw 網站（Django）的 systemd 服務。
+# 由 deploy/install-service.sh 填入專案路徑、使用者與 port 後安裝到 /etc/systemd/system/；
+# 要修改設定請改 repo 裡的 deploy/yichengs-web.service，再重新執行安裝腳本。
+
+[Unit]
+Description=yichengs.tw personal website (Django)
+After=network.target
+
+[Service]
+Type=simple
+User=@USER@
+Group=@GROUP@
+WorkingDirectory=@PROJECT_DIR@
+# DJANGO_SECRET_KEY 存在這裡（只有 root 可讀）
+EnvironmentFile=-/etc/yichengs-web.env
+Environment=PYTHONUNBUFFERED=1
+# 只聽本機，對外由 Cloudflare Tunnel 轉進來
+ExecStart=@PROJECT_DIR@/venv/bin/python manage.py runserver 127.0.0.1:@PORT@ --noreload
+Restart=on-failure
+RestartSec=3
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
